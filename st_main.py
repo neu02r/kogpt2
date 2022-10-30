@@ -23,7 +23,7 @@ def gpt(prompt, min, max, rept_penalty):
                                     pad_token='<pad>', mask_token='<mask>') 
     
     
-    model = AutoModelForPreTraining.from_pretrained("https://huggingface.co/neu02r/base/blob/main/%EB%B2%A0%EC%9D%B4%EC%8A%A4%EB%AA%A8%EB%8D%B8.pth")
+    model = AutoModelForPreTraining.from_pretrained("skt/kogpt2-base-v2")
     #model.load_state_dict(torch.load('베이스모델.pth', map_location=device))
     
     #생성 
@@ -69,10 +69,9 @@ def display():
    
     
     #프롬프트
-    prompt = st.text_area('', '방안에 나비가 \n온점 나오면 줄바꿈하는게 보기엔 좋은데 \
-                          인위적인 조작이라 그대로 가는게 좋을듯\
-                          \n이제 시인별모델 버튼추가, 이미지캡셔닝 연결,\
-                          ?:깃허브 + 스트림릿 클라우드 (배포)')
+    prompt = st.text_area('', '방안에 나비가...현재 skt kogpt2모델임')
+                          
+                          
                           
     
     if st.button('시 생성하기'):
