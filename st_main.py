@@ -26,7 +26,7 @@ def gpt(prompt, min, max, rept_penalty):
     model = AutoModelForPreTraining.from_pretrained("https://huggingface.co/neu02r/base/blob/main/%EB%B2%A0%EC%9D%B4%EC%8A%A4%EB%AA%A8%EB%8D%B8.pth")
     #model.load_state_dict(torch.load('베이스모델.pth', map_location=device))
     
-    #생성
+    #생성 
     prompt_ids = tokenizer.encode(prompt)
     inp = torch.tensor(prompt_ids)[None].cpu()
     preds = model.generate(inp,              
