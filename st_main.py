@@ -5,12 +5,10 @@ Created on Tue Oct 18 14:39:42 2022
 @author: jh
 """
 
-! pip install torch
-! pip install transformers
 
-import torch 
 import streamlit as st
 from PIL import Image
+import torch 
 from transformers import AutoModelForPreTraining, PreTrainedTokenizerFast
 from typing import Optional
 
