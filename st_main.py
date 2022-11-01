@@ -24,8 +24,9 @@ model = AutoModelForPreTraining.from_pretrained("skt/kogpt2-base-v2")
 
 
 
-def gpt(prompt, min, max, rept_penalty):       
-    model.load_state_dict(torch.load('base.pth', map_location=device))
+def gpt(prompt, min, max, rept_penalty):
+  
+    #model.load_state_dict(torch.load('base.pth', map_location=device))
     
     
     #생성 
